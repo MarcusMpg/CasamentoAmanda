@@ -32,8 +32,10 @@ body::before {
 }
 
 .header h1 {
-  font-weight: 300;
+  font-weight: 500;
   color: #2e7d32;
+  font-family: "Alex Brush", cursive;
+  font-size: 100px;
 }
 
 .container {
@@ -211,6 +213,9 @@ footer {
   .header {
     padding: 2.5rem 0;
   }
+  .header h1 {
+    font-size: 50px;
+  }
   .save-the-date h1 {
     font-size: 22px;
   }
@@ -220,6 +225,7 @@ footer {
   }
   .save-the-date p {
     font-size: 20px;
+    margin-bottom: 1rem;
   }
   .save-the-date {
     height: auto;
@@ -269,6 +275,26 @@ footer {
   footer {
     padding: 1rem 0;
     font-size: 0.95rem;
+  }
+}
+
+/* Responsivo para celular */
+@media (max-width: 600px) {
+  .contador-wrapper {
+    gap: 0.5rem;
+  }
+  .contador-item {
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    max-height: 60px;
+    padding: 0.7rem 0.6rem;
+  }
+  .contador-valor {
+    font-size: 1.2rem;
+  }
+  .contador-label {
+    font-size: 0.85rem;
   }
 }
 
@@ -343,25 +369,6 @@ footer {
   font-weight: 500;
 }
 
-/* Responsivo para celular */
-@media (max-width: 600px) {
-  .contador-wrapper {
-    gap: 0.5rem;
-  }
-  .contador-item {
-    min-width: 60px;
-    min-height: 60px;
-    max-width: 60px;
-    max-height: 60px;
-    padding: 0.7rem 0.6rem;
-  }
-  .contador-valor {
-    font-size: 1.2rem;
-  }
-  .contador-label {
-    font-size: 0.85rem;
-  }
-}
 /* Exibe os nomes lado a lado em telas grandes */
 .names {
   display: flex;
