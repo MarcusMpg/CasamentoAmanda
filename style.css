@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5fff5;
+  color: #333;
+  line-height: 1.6;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("img/imagem-de-fundo.jpg") no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.header {
+  text-align: center;
+  padding: 5rem 0;
+  background-color: #e8f5e9;
+}
+
+.header img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-weight: 300;
+  color: #2e7d32;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.gift-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.gift-item {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 100, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.gift-item:hover {
+  transform: translateY(-5px);
+}
+
+.gift-image {
+  height: 160px;
+  background-color: #e8f5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gift-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gift-details {
+  padding: 1.2rem;
+}
+
+.gift-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #2e7d32;
+}
+
+.gift-price {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #388e3c;
+}
+
+.gift-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  background-color: #a5d6a7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.gift-btn:hover {
+  background-color: #81c784;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 90%;
+  width: 300px;
+}
+
+.modal-title {
+  margin-bottom: 1rem;
+  color: #2e7d32;
+}
+
+#qrcode {
+  margin: 1rem auto;
+}
+
+.close-btn {
+  margin-top: 1rem;
+  padding: 8px 16px;
+  background-color: #a5d6a7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #81c784;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #2e7d32;
+  background-color: #e8f5e9;
+  margin-top: 2rem;
+}
+
+.save-the-date {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #e8f5e9;
+  margin-bottom: 2rem;
+  height: 30rem;
+}
+
+.save-the-date h1 {
+  font-size: 32px;
+  font-family: questrial, sans-serif;
+  font-weight: 300;
+  color: #647965;
+}
+
+.save-the-date h2 {
+  font-weight: 300;
+  font-size: 120px;
+  font-family: "Alex Brush", cursive;
+  color: #2e7d32;
+  padding-bottom: 2%;
+}
+
+.save-the-date p {
+  font-weight: 300;
+  font-size: 32px;
+  font-family: questrial, sans-serif;
+  color: #2e7d32;
+}
+
+/* Responsividade para telas médias e pequenas */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 95vw;
+    padding: 0 10px;
+  }
+  .save-the-date h2 {
+    font-size: 60px;
+    padding-bottom: 4%;
+  }
+  .save-the-date {
+    height: 18rem;
+    padding: 1.2rem 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    padding: 2.5rem 0;
+  }
+  .save-the-date h1 {
+    font-size: 22px;
+  }
+  .save-the-date h2 {
+    font-size: 38px;
+    padding-bottom: 6%;
+  }
+  .save-the-date p {
+    font-size: 20px;
+  }
+  .save-the-date {
+    height: auto;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+  .gift-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .gift-image {
+    height: 120px;
+  }
+  .gift-details {
+    padding: 0.8rem;
+  }
+  .gift-title {
+    font-size: 1rem;
+  }
+  .gift-price {
+    font-size: 0.95rem;
+  }
+  .modal-content {
+    padding: 1rem;
+    width: 95vw;
+    max-width: 95vw;
+  }
+  footer {
+    padding: 1rem 0;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .save-the-date h2 {
+    font-size: 24px;
+  }
+  .save-the-date p {
+    font-size: 16px;
+  }
+  .gift-image {
+    height: 80px;
+  }
+  .modal-content {
+    padding: 0.5rem;
+    width: 98vw;
+    max-width: 98vw;
+  }
+}
