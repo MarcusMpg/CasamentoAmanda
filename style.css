@@ -313,6 +313,10 @@ footer {
     width: 98vw;
     max-width: 98vw;
   }
+  .meu-mapa #map {
+    height: 300px;
+    width: 80%;
+  }
 }
 
 .contagem-regressiva {
@@ -379,7 +383,7 @@ footer {
 
 #map {
   height: 400px;
-  width: 45%;
+  width: 50%;
   margin: 10px auto;
 }
 .meu-mapa {

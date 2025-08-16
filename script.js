@@ -77,15 +77,18 @@ const map = L.map("map", {
   zoomControl: true, // mantém os botões + e -
   scrollWheelZoom: false,
   doubleClickZoom: false,
-  touchZoom: false,
+  touchZoom: true,
   boxZoom: false,
   keyboard: false,
-}).setView([-1.4672599299802953, -48.49670092272268], 15);
+}).setView([-1.4672599299802953, -48.49670092272268], 12);
 
 const layer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
 });
 layer.addTo(map);
 
-const marker = L.marker([-1.4672599299802953, -48.49670092272268]).addTo(map);
-marker.bindPopup("Local da Cerimônia");
+const marker1 = L.marker([-1.4672599299802953, -48.49670092272268]).addTo(map);
+marker1.bindPopup("Local da Cerimônia").openPopup();
+
+const marker2 = L.marker([-1.466235866917895, -48.46025060006504]).addTo(map);
+marker2.bindPopup("Local da Cerimônia").openPopup();
