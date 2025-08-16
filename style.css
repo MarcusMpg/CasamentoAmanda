@@ -376,3 +376,22 @@ footer {
   align-items: center;
   gap: 1.5rem;
 }
+
+#map {
+  height: 400px;
+  width: 45%;
+  margin: 10px auto;
+}
+.meu-mapa {
+  background-color: #e8f5e9;
+  border-radius: 8px;
+}
+
+.map-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #1c3a1e;
+  margin: 10px 0;
+  font-family: "Times New Roman", Times, serif;
+}

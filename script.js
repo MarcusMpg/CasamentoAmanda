@@ -72,3 +72,20 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(atualizarContagemRegressiva, 1000);
   atualizarContagemRegressiva();
 });
+
+const map = L.map("map", {
+  zoomControl: true, // mantém os botões + e -
+  scrollWheelZoom: false,
+  doubleClickZoom: false,
+  touchZoom: false,
+  boxZoom: false,
+  keyboard: false,
+}).setView([-1.4672599299802953, -48.49670092272268], 15);
+
+const layer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 19,
+});
+layer.addTo(map);
+
+const marker = L.marker([-1.4672599299802953, -48.49670092272268]).addTo(map);
+marker.bindPopup("Local da Cerimônia");
