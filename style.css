@@ -169,7 +169,7 @@ footer {
   text-align: center;
   padding: 2rem 0;
   background-color: #e8f5e9;
-  margin-bottom: 2rem;
+
   height: 30rem;
 }
 
@@ -272,5 +272,80 @@ footer {
     padding: 0.5rem;
     width: 98vw;
     max-width: 98vw;
+  }
+}
+
+.contagem-regressiva {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #82c289;
+  margin-bottom: 2rem;
+}
+
+.contagem-regressiva h2 {
+  font-size: 32px;
+  font-family: questrial, sans-serif;
+  font-weight: 300;
+  color: #405541;
+}
+
+.contagem-regressiva #contador {
+  font-weight: bold;
+  font-size: 24px;
+  color: #2e7d32;
+}
+
+.contador-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contador-item {
+  background: #d0f5d8;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 90px;
+  min-height: 90px;
+  max-width: 90px;
+  max-height: 90px;
+  box-shadow: 0 2px 8px rgba(0, 100, 0, 0.08);
+  justify-content: center;
+}
+
+.contador-valor {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 0.3rem;
+}
+
+.contador-label {
+  font-size: 1rem;
+  color: #388e3c;
+  font-weight: 500;
+}
+
+/* Responsivo para celular */
+@media (max-width: 600px) {
+  .contador-wrapper {
+    gap: 0.5rem;
+  }
+  .contador-item {
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    max-height: 60px;
+    padding: 0.7rem 0.6rem;
+  }
+  .contador-valor {
+    font-size: 1.2rem;
+  }
+  .contador-label {
+    font-size: 0.85rem;
   }
 }

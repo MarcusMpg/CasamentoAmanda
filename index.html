@@ -24,6 +24,10 @@
       <h2>Amanda & Alexandre</h2>
       <p>26 . 09 . 2025</p>
     </div>
+    <div class="contagem-regressiva">
+      <h2>Contagem Regressiva</h2>
+      <div id="contador"></div>
+    </div>
 
     <main class="container">
       <div class="gift-list">
@@ -367,41 +371,6 @@
       <p>Obrigado por fazer parte do nosso dia especial!</p>
     </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const modal = document.getElementById("qrModal");
-        const modalTitle = document.getElementById("modalTitle");
-        const closeBtn = document.getElementById("closeModal");
-        const giftImg = document.getElementById("giftImg");
-
-        // Mapeamento dos presentes para imagens locais
-        const giftImages = {
-          "Jogo de Panelas": "img/jogo-panelas.png",
-          "Cafeteira Elétrica": "img/cafeteira.png",
-          "Jogo de Jantar": "img/jogo-jantar.png",
-          "Conjunto de Toalhas": "img/toalhas.png",
-          "Air Fryer": "img/air-fryer.png",
-          "Smart TV 43": "img/smart-tv.png",
-        };
-
-        document.querySelectorAll(".gift-btn").forEach((button) => {
-          button.addEventListener("click", function () {
-            const itemName = this.getAttribute("data-item");
-            modalTitle.textContent = itemName;
-            modal.style.display = "flex";
-          });
-        });
-
-        closeBtn.addEventListener("click", function () {
-          modal.style.display = "none";
-        });
-
-        window.addEventListener("click", function (event) {
-          if (event.target === modal) {
-            modal.style.display = "none";
-          }
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
