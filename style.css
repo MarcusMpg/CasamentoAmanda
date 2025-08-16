@@ -165,6 +165,7 @@ footer {
   padding: 2rem 0;
   background-color: #e8f5e9;
   height: 30rem;
+  margin-top: 10px;
 }
 
 .save-the-date h1 {
@@ -187,6 +188,7 @@ footer {
   font-size: 32px;
   font-family: questrial, sans-serif;
   color: #2e7d32;
+  padding: 5px 0;
 }
 
 /* Responsividade para telas médias e pequenas */
@@ -232,6 +234,15 @@ footer {
     height: auto;
     padding: 1rem 0 0.2rem 0;
     margin-bottom: 0;
+  }
+  .names {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .names h2 {
+    font-size: 55px;
+    padding: 0;
+    margin: 0;
   }
   .gift-list {
     grid-template-columns: 1fr;
@@ -350,4 +361,11 @@ footer {
   .contador-label {
     font-size: 0.85rem;
   }
+}
+/* Exibe os nomes lado a lado em telas grandes */
+.names {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
