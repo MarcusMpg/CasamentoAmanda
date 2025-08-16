@@ -26,14 +26,9 @@ body::before {
 
 .header {
   text-align: center;
-  padding: 5rem 0;
+  padding: 4rem 0;
   background-color: #e8f5e9;
-}
-
-.header img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .header h1 {
@@ -169,7 +164,6 @@ footer {
   text-align: center;
   padding: 2rem 0;
   background-color: #e8f5e9;
-
   height: 30rem;
 }
 
@@ -233,7 +227,6 @@ footer {
   .contagem-regressiva {
     padding: 1.2rem 0 1rem 0;
     margin-top: 0;
-    margin-bottom: 1.2rem;
   }
   .save-the-date {
     height: auto;
@@ -289,7 +282,6 @@ footer {
   text-align: center;
   padding: 2rem 0;
   background-color: #82c289;
-  margin-bottom: 2rem;
 }
 
 .contagem-regressiva h2 {
