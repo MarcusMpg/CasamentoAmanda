@@ -92,3 +92,14 @@ marker1.bindPopup("Local da Cerimônia").openPopup();
 
 const marker2 = L.marker([-1.466235866917895, -48.46025060006504]).addTo(map);
 marker2.bindPopup("Local da Cerimônia").openPopup();
+
+// Crie um array com todos os marcadores
+const marcadores = [marker1, marker2];
+
+// Função para centralizar e ajustar o zoom
+document
+  .getElementById("btn-centralizar-mapa")
+  .addEventListener("click", function () {
+    const grupo = L.featureGroup(marcadores);
+    map.fitBounds(grupo.getBounds(), { padding: [40, 40] });
+  });
