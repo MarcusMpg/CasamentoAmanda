@@ -296,6 +296,10 @@ footer {
   .contador-label {
     font-size: 0.85rem;
   }
+  .meu-mapa #map {
+    height: 300px;
+    width: 80%;
+  }
 }
 
 @media (max-width: 400px) {
