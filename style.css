@@ -165,7 +165,6 @@ footer {
   padding: 2rem 0;
   background-color: #e8f5e9;
   height: 30rem;
-  margin-top: 10px;
 }
 
 .save-the-date h1 {
@@ -173,6 +172,7 @@ footer {
   font-family: questrial, sans-serif;
   font-weight: 300;
   color: #647965;
+  padding-top: 20px;
 }
 
 .save-the-date h2 {
