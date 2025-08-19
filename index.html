@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de Presentes - Casamento</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" type="image/png" href="./img/FotoDois.png" />
+    <link rel="shortcut icon" type="image/png" href="./src/img/FotoDois.png" />
 
     <link
       rel="stylesheet"
@@ -39,6 +39,17 @@
       <h2>Contagem Regressiva</h2>
       <div id="contador"></div>
     </div>
+
+    <!--    <div class="areaDeConfirmacao">
+      <div class="confirmPresenca">
+        <label for="nomeConvidado">Nome do Convidado:</label>
+        <textarea rows="4" id="nomeConvidado" name="nomeConvidado"></textarea>
+      </div>
+      <div class="confirmPresencaBtn">
+        <button id="btn-confirmar-presenca">Confirmar Presença</button>
+      </div>
+    </div>
+ -->
     <header class="header">
       <div class="container">
         <h1>Lista de Presentes</h1>
@@ -49,14 +60,60 @@
       <div class="gift-list">
         <div class="gift-item">
           <div class="gift-image">
+            <img src="./src/img/sanduicheira.png" alt="Sanduicheira" />
+          </div>
+          <div class="gift-details">
+            <h3 class="gift-title">Sanduicheira</h3>
+            <p class="gift-price">R$ 100,00</p>
+            <button class="gift-btn" data-item="Sanduicheira">
+              Selecionar Presente
+            </button>
+          </div>
+        </div>
+
+        <div class="gift-item">
+          <div class="gift-image">
             <img
-              src="./img/JogoDePanelas.png"
-              alt="Jogo de panelas premium em aço inoxidável com alças de madeira"
+              src="./src/img/CorteDeCabelo.npg"
+              alt="Corte de cabelo do Noivo"
             />
           </div>
           <div class="gift-details">
+            <h3 class="gift-title">Corte de cabelo do Noivo</h3>
+            <p class="gift-price">R$ 90,00</p>
+            <button class="gift-btn" data-item="Corte de cabelo do Noivo">
+              Selecionar Presente
+            </button>
+          </div>
+        </div>
+
+        <div class="gift-item">
+          <div class="gift-image">
+            <img
+              src="./src/img/MarquinhaDeFita.png"
+              alt="Marquinha de Fita da Noiva"
+            />
+          </div>
+          <div class="gift-details">
+            <h3 class="gift-title">Marquinha de Fita da Noiva</h3>
+            <p class="gift-price">R$ 100,00</p>
+            <button class="gift-btn" data-item="Marquinha de Fita da Noiva">
+              Selecionar Presente
+            </button>
+          </div>
+        </div>
+
+        <div class="gift-item">
+          <div class="gift-image">
+            <img
+              src="./src/img/JogoDePanelas.png"
+              alt="Jogo de panelas premium em aço inoxidável com alças de madeira"
+            />
+          </div>
+
+          <div class="gift-details">
             <h3 class="gift-title">Jogo de Panelas</h3>
-            <p class="gift-price">R$ 450,00</p>
+            <p class="gift-price">R$ 250,00</p>
             <button class="gift-btn" data-item="Jogo de Panelas">
               Selecionar Presente
             </button>
@@ -66,13 +123,13 @@
         <div class="gift-item">
           <div class="gift-image">
             <img
-              src="./img/cafeteira.png"
+              src="./src/img/cafeteira.png"
               alt="Cafeteira elétrica moderna com jarra de vidro e função programável"
             />
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Cafeteira Elétrica</h3>
-            <p class="gift-price">R$ 220,00</p>
+            <p class="gift-price">R$ 120,00</p>
             <button class="gift-btn" data-item="Cafeteira Elétrica">
               Selecionar Presente
             </button>
@@ -88,7 +145,7 @@
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Jogo de Jantar</h3>
-            <p class="gift-price">R$ 600,00</p>
+            <p class="gift-price">R$ 300,00</p>
             <button class="gift-btn" data-item="Jogo de Jantar">
               Selecionar Presente
             </button>
@@ -104,7 +161,7 @@
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Conjunto de Toalhas</h3>
-            <p class="gift-price">R$ 280,00</p>
+            <p class="gift-price">R$ 180,00</p>
             <button class="gift-btn" data-item="Conjunto de Toalhas">
               Selecionar Presente
             </button>
@@ -120,7 +177,7 @@
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Air Fryer</h3>
-            <p class="gift-price">R$ 399,00</p>
+            <p class="gift-price">R$ 299,00</p>
             <button class="gift-btn" data-item="Air Fryer">
               Selecionar Presente
             </button>
@@ -129,21 +186,8 @@
 
         <div class="gift-item">
           <div class="gift-image">
-            <img src="./img/CorteDeCabelo.npg" alt="Corte de cabelo do Noivo" />
-          </div>
-          <div class="gift-details">
-            <h3 class="gift-title">Corte de cabelo do Noivo</h3>
-            <p class="gift-price">R$ 100,00</p>
-            <button class="gift-btn" data-item="Corte de cabelo do Noivo">
-              Selecionar Presente
-            </button>
-          </div>
-        </div>
-
-        <div class="gift-item">
-          <div class="gift-image">
             <img
-              src="img/melhor-ferro-de-passar-roupa.png"
+              src="./src/img/melhor-ferro-de-passar-roupa.png"
               alt="Ferro de Passar"
             />
           </div>
@@ -158,11 +202,11 @@
 
         <div class="gift-item">
           <div class="gift-image">
-            <img src="img/SpaDoCasal.png" alt="Dia de Spa do Casal" />
+            <img src="./src/img/SpaDoCasal.png" alt="Dia de Spa do Casal" />
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Dia de Spa do Casal</h3>
-            <p class="gift-price">R$ 350,00</p>
+            <p class="gift-price">R$ 250,00</p>
             <button class="gift-btn" data-item="Dia de Spa do Casal">
               Selecionar Presente
             </button>
@@ -172,7 +216,7 @@
         <div class="gift-item">
           <div class="gift-image">
             <img
-              src="img/JogoDeFaqueiro.png"
+              src="./src/img/JogoDeFaqueiro.png"
               alt="Jogo de Faqueiro Tramontina"
             />
           </div>
@@ -187,7 +231,7 @@
 
         <div class="gift-item">
           <div class="gift-image">
-            <img src="img/JogoDeTacas.png" alt="Jogo de Taças" />
+            <img src="./src/img/JogoDeTacas.png" alt="Jogo de Taças" />
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Jogo de taças</h3>
@@ -200,11 +244,11 @@
 
         <div class="gift-item">
           <div class="gift-image">
-            <img src="img/diariaHotel.png" alt="Diária no Hotel" />
+            <img src="./src/img/diariaHotel.png" alt="Diária no Hotel" />
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Diária no Hotel</h3>
-            <p class="gift-price">R$ 400,00</p>
+            <p class="gift-price">R$ 300,00</p>
             <button class="gift-btn" data-item="Diária no Hotel">
               Selecionar Presente
             </button>
@@ -213,7 +257,7 @@
 
         <div class="gift-item">
           <div class="gift-image">
-            <img src="img/JogoDeRoupao.png" alt="Jogo de Roupão" />
+            <img src="./src/img/JogoDeRoupao.png" alt="Jogo de Roupão" />
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Jogo de Roupão</h3>
@@ -226,11 +270,14 @@
 
         <div class="gift-item">
           <div class="gift-image">
-            <img src="img/NoiteDeNupcia.png" alt="Enxoval da Noite de Núpcia" />
+            <img
+              src="./src/img/NoiteDeNupcia.png"
+              alt="Enxoval da Noite de Núpcia"
+            />
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Enxoval da Noite de Núpcia</h3>
-            <p class="gift-price">R$ 300,00</p>
+            <p class="gift-price">R$ 200,00</p>
             <button class="gift-btn" data-item="Enxoval da Noite de Núpcia">
               Selecionar Presente
             </button>
@@ -240,7 +287,7 @@
         <div class="gift-item">
           <div class="gift-image">
             <img
-              src="img/JantarRomanticoCasal.png"
+              src="./src/img/JantarRomanticoCasal.png"
               alt="Cota de Jantar Romântico do Casal"
             />
           </div>
@@ -258,20 +305,7 @@
 
         <div class="gift-item">
           <div class="gift-image">
-            <img src="img/sanduicheira.png" alt="Sanduicheira" />
-          </div>
-          <div class="gift-details">
-            <h3 class="gift-title">Sanduicheira</h3>
-            <p class="gift-price">R$ 100,00</p>
-            <button class="gift-btn" data-item="Sanduicheira">
-              Selecionar Presente
-            </button>
-          </div>
-        </div>
-
-        <div class="gift-item">
-          <div class="gift-image">
-            <img src="img/Liquidificador.png" alt="Liquidificador" />
+            <img src="./src/img/Liquidificador.png" alt="Liquidificador" />
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Liquidificador</h3>
@@ -284,7 +318,7 @@
 
         <div class="gift-item">
           <div class="gift-image">
-            <img src="img/Spa-dos-Pés.png" alt="Spa dos Pés" />
+            <img src="./src/img/Spa-dos-Pés.png" alt="Spa dos Pés" />
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Spa dos Pés</h3>
@@ -298,22 +332,9 @@
         <div class="gift-item">
           <div class="gift-image">
             <img
-              src="img/MarquinhaDeFita.png"
-              alt="Marquinha de Fita da Noiva"
+              src="./src/img/MassagemDoCasal.png"
+              alt="Vale Sessão de Massagem"
             />
-          </div>
-          <div class="gift-details">
-            <h3 class="gift-title">Marquinha de Fita da Noiva</h3>
-            <p class="gift-price">R$ 150,00</p>
-            <button class="gift-btn" data-item="Marquinha de Fita da Noiva">
-              Selecionar Presente
-            </button>
-          </div>
-        </div>
-
-        <div class="gift-item">
-          <div class="gift-image">
-            <img src="img/MassagemDoCasal.png" alt="Vale Sessão de Massagem" />
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Vale Sessão de Massagem</h3>
@@ -326,7 +347,7 @@
 
         <div class="gift-item">
           <div class="gift-image">
-            <img src="img/lulu.png" alt="Cachorrinho" />
+            <img src="./src/img/lulu.png" alt="Cachorrinho" />
           </div>
           <div class="gift-details">
             <h3 class="gift-title">Cachorrinho para Aurora e Samuel</h3>
@@ -353,7 +374,7 @@
         <h3 class="modal-title" id="modalTitle">Presente Selecionado</h3>
         <img
           id="giftImg"
-          src="img/image.png"
+          src="./src/img/image.png"
           alt="QR Code para pagamento"
           style="width: 200px; margin: 1rem auto; display: block"
         />
@@ -372,6 +393,6 @@
       </p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./src/script.js"></script>
   </body>
 </html>

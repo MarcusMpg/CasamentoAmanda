@@ -103,3 +103,17 @@ document
     const grupo = L.featureGroup(marcadores);
     map.fitBounds(grupo.getBounds(), { padding: [40, 40] });
   });
+
+//confirmação de presença
+const inpText = document.getElementById("nomeConvidado");
+const btnConfirmar = document.getElementById("btn-confirmar-presenca");
+const numeroZAP = 0;
+
+const handleSubmitForm = async () => {
+  const name = inpText.ariaValueMax;
+
+  if (name === "") {
+    alert("Confirme sua presencao!");
+    return;
+  }
+};
